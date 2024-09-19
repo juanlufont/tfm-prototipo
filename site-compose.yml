@@ -1,0 +1,31 @@
+---
+version: "3"
+services:
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    env_file: token.env
+    networks:
+      - caddy_net
+
+  caddy:
+    build:
+      context: ./site
+      dockerfile: Dockerfile
+      args:
+        BASEURL: ${BASEURL:-https://example.org}
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    networks:
+      - caddy_net
+    depends_on:
+      - cloudflared
+
+networks:
+  caddy_net:
+    external: true

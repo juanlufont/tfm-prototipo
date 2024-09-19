@@ -1,0 +1,8 @@
+languageCode = 'en-us'
+title = 'UPO TFM'
+theme = 'PaperMod'
+baseURL = 'https://upo.ducktective.org'
+
+[taxonomies]
+tag = "tags"
+category = "categories"
