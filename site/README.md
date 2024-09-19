@@ -4,20 +4,21 @@
 
 Check [Hugo quickstart](https://gohugo.io/getting-started/quick-start/).
 
-I already had a GitHub repo for this so ..
-
 ```bash
 hugo new site mysite --force
 ```
 
 ## Theme
 
-Install [PaperMod](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation) theme (Method 2: submodule):
+Install
+[PaperMod](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation)
+theme (Method 2: submodule):
 
 ```bash
-cd casa
+# this generate a .gitmodules file
 git submodule add --depth=1 https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
-git submodule update --init --recursive # needed when you reclone your repo (submodules may not get cloned automatically)
+# once you have a valid .gitmodules file, just run
+git submodule update --init --recursive
 ```
 
 Load submodules after cloning the repo:
@@ -38,7 +39,8 @@ git submodule update --remote --merge
 hugo new posts/my-first-post.md
 ```
 
-Everything is a _draft_ by default
+Everything is a _draft_ by default, keep in mind when serving the site.
+You can change this behaviour editing `./archetypes/default.md`.
 
 ## Add image
 
@@ -46,7 +48,7 @@ Images go to the `./static` folder.
 
 You can reference them from your markdown (no need of "/static/" prefix):
 
-```
+```markdown
 ![Image Label](/image-name.jpg)
 ```
 
@@ -62,22 +64,17 @@ Include drafts with
 hugo server --buildDrafts
 ```
 
+The command hugo-lunr knows where to check for content (`./content`) and where
+to create the index (`./public/lunr.json`)
+
+## Add tags and categories
+
+This [example](https://discourse.gohugo.io/t/how-to-add-tag-and-category/3202)
+is clearer (and shorter) than the official documentation
+
 ## Add search functionality
 
 Let's try <https://www.npmjs.com/package/hugo-lunr>
 
 ```bash
 npm -g install hugo-lunr
-```
-
-The command hugo-lunr knows where to check for content (`./content`) and where to create the index (`./public/lunr.json`)
-
-## Add tags and categories
-
-This [example](https://discourse.gohugo.io/t/how-to-add-tag-and-category/3202) is clearer (and shorter) than the oficial documentation
-
-## Add basic search
-
-<https://jimmysong.io/en/blog/hugo-instant-search-guide/>
-
-<https://makewithhugo.com/add-search-to-a-hugo-site/>
