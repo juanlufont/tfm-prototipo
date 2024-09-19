@@ -1,13 +1,20 @@
 #!/bin/bash
 
+# Generate a Markdown file with a list of files hosted by a IPFS container
+
+# IPFS container name
 CONTAINER="${1:-ipfs}"
+# MFS folder
 FOLDER="${2:-/export}"
+# FQDN for the IPFS instance
 DOMAIN="${3:-http://ipfs.example.org}"
 
-# DATA format:
+# DATA format from command "ipfs files ls":
 # filename CID size
 DATA=$(docker exec "${CONTAINER}" ipfs files ls -l "${FOLDER}")
 
+# File template
+# WARNING! date format is crucial for Hugo to accept the resulting file
 cat <<EOF
 ---
 title: "Enlaces IPFS"
@@ -31,6 +38,7 @@ red, fuera del objetivo de este prototipo.
 
 EOF
 
+# write list of IPFS urls
 while read -r file cid _; do
     echo "- [${file}](${DOMAIN}/ipfs/${cid}?filename=${file}), [mirror](https://ipfs.io/ipfs/${cid}?filename=${file})"
 done <<<"${DATA}"
