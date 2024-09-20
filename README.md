@@ -11,16 +11,38 @@ El siguiente prototipo es una prueba de concepto que auna:
   (túneles y DNS)
 - automatización basada en contenedores Docker
 
-La configuración del prototipo es _opinionated_ al tratarse de una una
-prueba de concepto minimalista. Al tratarse de un esfuerzo de integración de
-componentes es posible modificar distintas partes para permitir el uso
-de distintas tecnologías (p.e. usar un servidor web distinto), mecánicas de
-acceso (p.e. acceso directo a través de cortafuegos en lugar del uso de
+La configuración del prototipo es _opinionated_ al tratarse de una prueba
+de concepto mínima (_Minimum Viable Prototype_). Al tratarse de un esfuerzo de
+integración de componentes es posible modificar distintas partes para permitir
+el uso de distintas tecnologías (p.e. usar un servidor web distinto), mecánicas
+de acceso (p.e. acceso directo a través de cortafuegos en lugar del uso de
 túnel Cloudflare), etc.
+
+## Arquitectura
+
+![arquitectura prototipo](./files/prototipo.png)
+
+El prototipo consta de los siguientes elementos:
+
+- instancia [IPFS](https://ipfs.io)
+- archivos compartidos a través de IPFS
+- servidor web basado en [Caddy](https://caddyserver.com)
+- sitio web estático generado a partir de Markdown usando
+[Hugo](https://gohugo.io)
+- demonio [cloudflared](https://github.com/cloudflare/cloudflared) encargado de
+administrar el túnel Cloudflare
+
+El prototipo incluye automáticamente en la instancia de IPFS todos los archivos
+localizados en el directorio `./files`. La lista de estos archivos se genera
+automáticamente y se incluye en el sitio web estático generado por Hugo. El
+túnel Cloudflare permite acceder desde Internet tanto a la instancia IPFS como
+al sitio web estático servido a través de Caddy sin necesidad de modificar
+ninguna configuración de red (apertura de puertos, configuración de _routers_,
+etc).
 
 ## Requisitos
 
-El prototipo require los siguientes elementos:
+El prototipo requiere los siguientes elementos:
 
 - cuenta [Cloudflare](https://www.cloudflare.com/), el plan gratuito es
   suficiente
