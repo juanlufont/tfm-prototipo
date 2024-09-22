@@ -74,7 +74,8 @@ is clearer (and shorter) than the official documentation
 
 ## Add search functionality
 
-Let's try <https://www.npmjs.com/package/hugo-lunr>
+Instructions in <https://pankajpipada.com/posts/2024-05-27-hugo-search/>
 
 ```bash
 npm -g install hugo-lunr
+```

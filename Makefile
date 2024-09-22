@@ -23,4 +23,4 @@ site:
 
 site-clean:
 	docker-compose -f site-compose.yml down --volumes
-	-docker rmi prototype_caddy
+	-docker rmi tfm-prototipo_caddy
