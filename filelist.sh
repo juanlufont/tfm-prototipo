@@ -22,18 +22,20 @@ date: $(date +"%Y-%m-%dT%H:%M:%S%:z")
 draft: false
 ---
 
-Esta página contiene un listado de enlaces IPFS.
+Esta página contiene un listado de enlaces almacenados en la instancia
+local IPFS incluida en el prototipo.
 
-Los enlaces apuntan a copias de las imágenes usadas en el presente 
+Los enlaces apuntan a copias de las imágenes usadas en el presente
 TFM (las cuales se incluyen en el documento PDF final).
 
-Estas imágenes están hospedadas por una instancia temporal "auto-hospedada"
-(self-hosted) de IPFS. El acceso a los archivos se realiza a través de una 
+Estas imágenes están alojadas por una instancia temporal "auto-alojada"
+(self-hosted) de IPFS. El acceso a los archivos se puede realizar a través de
+dos enlaces distintos, uno al _gateway_ local de la instancia IPFS y otro al
 _gateway_ HTTPS proporcionada por el proyecto IPFS.
 
-**AVISO!** debido a restricciones del _gateway_ público, los archivos PDF 
-presentan más problemas a la hora de ser accecidos a través de estos 
-enlaces. Este problema se puede solventar con configuraciones avanzadas de 
+**AVISO!** debido a restricciones del _gateway_ público, los archivos PDF
+presentan más problemas a la hora de ser accecidos a través de estos
+enlaces. Este problema se puede solventar con configuraciones avanzadas de
 red, fuera del objetivo de este prototipo.
 
 EOF
