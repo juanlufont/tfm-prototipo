@@ -25,9 +25,9 @@ draft: false
 Esta página contiene un listado de enlaces almacenados en la instancia
 local IPFS incluida en el prototipo.
 
-Los enlaces apuntan a colección de libros bajo Dominio Público y artículos
-publicados como Open Access.Estos archivos están alojados por una instancia
-temporal (self-hosted) de IPFS. El acceso a los archivos se puede realizar a
+Los enlaces apuntan a una colección de libros bajo Dominio Público y artículos
+publicados como Open Access. Estos archivos están alojados por una instancia
+temporal (self-hosted) IPFS. El acceso a los archivos se puede realizar a
 través de dos enlaces distintos, uno al _gateway_ local de la instancia IPFS y
 otro al _gateway_ HTTPS proporcionada por el proyecto IPFS.
 
