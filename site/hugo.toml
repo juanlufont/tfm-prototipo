@@ -11,6 +11,15 @@ category = "categories"
 [params]
 centerTheme = true
 
+[languages.en.params]
+menuMore = "Mostrar más"
+readMore = "Leer más"
+readOtherPosts = "Leer otros posts"
+newerPosts = "Posts recientes"
+olderPosts = "Posts anteriores"
+missingContentMessage = "Página no encontrada ..."
+missingBackButtonLabel = "Volver a portada"
+
 [languages.en.params.logo]
 logoText = "UPO TFM: Guerrilla Storage"
 logoHomeLink = "/"
