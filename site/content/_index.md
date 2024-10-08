@@ -1,11 +1,11 @@
 ---
-title: "Guerrilla Archive"
+title: "Guerrilla Storage"
 description: "Prototipo TFM máster HHDD UPO"
 ---
 
 ## Descripción
 
-Éste es un sitio web estático perteneciente al prototipo _Guerrilla Archive_,
+Éste es un sitio web estático perteneciente al prototipo _Guerrilla Storage_,
 creado como parte del Trabajo Fin de Máster para la obtención del título Máster
 en Historia y Humanidades Digitales de la Universidad Pablo de Olavide.
 
