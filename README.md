@@ -1,3 +1,5 @@
+<!-- vim: set spelllang=es: -->
+
 # Prototipo TFM
 
 Este repositorio contiene el prototipo _Guerrilla Storage_, parte del
@@ -17,6 +19,22 @@ integración de componentes es posible modificar distintas partes para permitir
 el uso de distintas tecnologías (p.e. usar un servidor web distinto), mecánicas
 de acceso (p.e. acceso directo a través de cortafuegos en lugar del uso de
 túnel Cloudflare), etc.
+
+## Actualización 2024-10-10
+
+El día 2024-10-09 a las 9:00 realicé la defensa de mi TFM, con lo que este
+prototipo queda listo para ser archivado. Para evitar que las URLs usadas en el
+prototipo y citadas en el documento del TFM queden rotas
+(<https://upo.ducktective.org> y <http://ipfs.ducktective.org>), se han
+redirigido usando [Cloudflare page
+rules](https://developers.cloudflare.com/rules/page-rules/). El nuevo destino
+es una [breve nota en GitHub
+Pages](https://juanlufont.github.io/posts/tfm-upo/). Esta redirección
+funcionará por tanto tiempo como:
+- renueve el dominio `ducktective.org`
+- lo mantenga asociado a mi cuenta Cloudflare
+- mantenga activa mi cuenta Cloudflare y las _page rules_ asociadas
+- Cloudflare siga dando servicio :-)
 
 ## Arquitectura
 
